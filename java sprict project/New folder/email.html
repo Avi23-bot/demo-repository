@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="email.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6 col-md-3 form-container">
+				<form id="myForm">
+					<h2>Add user:</h2>
+
+					<div class="form-group">
+						<label for="user_name">Name</label>
+						<input type="text" class="form-control" id="user_name " placeholder="Enter your name" name="text" autocomplete="off">
+
+						
+					</div>
+					<div class="form-group">
+						<label for="user_name">E-mail</label>
+						<input type="text" class="form-control" id="user_email " placeholder="Enter your email" name="text" autocomplete="off">
+
+						
+					</div>
+					<div class="form-group">
+						<label for="user_name">Age</label>
+						<input type="text" class="form-control" id="user_age " placeholder="Enter your age" name="text" autocomplete="off">	
+					</div>
+
+					<input type="submit" class="btn btn-block btn-primary" value="Add user" name="">
+				</form>
+			</div>
+			<div class="col-xs-12 col-md-9 content-container">
+				<div class="row" id="parent_avatars" >
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-delete" data-card="1">X</div>
+						<div class="card-block">
+							<h3 class="card-title">Avinash Lamichhane</h3>
+							<p class="card-text">
+								<strong>Email</strong>:<span>Email@gmail.com</span>
+							</p>
+
+
+
+
+
+							
+							<p class="card-text">
+								<strong>Age</strong>:<span>19</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="email.js"></script>
+</html>

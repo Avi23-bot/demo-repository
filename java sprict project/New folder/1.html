@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Resistration Form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container"><br>
+		<h1 class="text-success text-center">Complet Validation Form in JavaSprict</h1><br>
+		<div class="col-lg-6 m-auto d-block">
+			<form action="#" onsubmit="return validation()" class="bg-light" >
+				<div class="form-group">
+					<label>UserName: </label>
+					<input type="text" name="user" class="form-control" id="user" autocomplete="off">
+					<span id="usrename" class="text-danger font-weight-bold"></span>
+
+				</div>
+				<div class="form-group">
+					<label>Password: </label>
+					<input type="password" name="pass" class="form-control" id="pass" autocomplete="off"><span id="passwords" class="text-danger font-weight-bold"></span>
+
+				</div>
+				<div class="form-group">
+					<label>Confirm Password: </label>
+					<input type="password" name="pass" class="form-control" id="confirm" autocomplete="off"><span id="confrmpass" class="text-danger font-weight-bold"></span>
+
+				</div>						
+				<div class="form-group">
+					<label>Mobile Number: </label>
+					<input type="text" name="user" class="form-control" id="mobilenumber" autocomplete="off"><span id="mobileon" class="text-danger font-weight-bold"></span>
+
+				</div>
+				<div class="form-group">
+					<label>E-mail: </label>
+					<input type="text" name="user" class="form-control" id="email" autocomplete="off"><span id="emails" class="text-danger font-weight-bold"></span>
+
+				</div>
+				<input type="submit" name="submit" value="submit" class="btn btn-success" autocomplete="off">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+
+		function validation(){
+
+		var user = document.getElementById('user').value;
+		var pass = document.getElementById('pass').value;
+		var confirmpass = document.getElementById('confirm').value;
+		var mobileNumber = document.getElementById('mobilenumber').value;
+		var email = document.getElementById('email').value;
+
+
+
+
+
+		if (user == ""){
+			document.getElementById('usrename').innerHTML = " ** please fill the username field";
+			return false;
+		}
+		if((user.length <= 2) || (user.length > 20)) {
+			document.getElementById('usrename').innerHTML = " ** User length must be between 2 and 20";
+			return false;
+		}
+		if (!isNaN(user)) {
+			document.getElementById('usrename').innerHTML = " ** Only chasracters are allowed";
+			return false;
+		}
+
+
+        if (pass == ""){
+			document.getElementById('passwords').innerHTML = " ** please fill the password field";
+			return false;
+		}
+		if((pass.length <= 8) || (pass.length > 20)) {
+			document.getElementById('passwords').innerHTML = " ** User length must be between 8 and 20";
+			return false;  }
+        if (pass != confirmpass) {
+			document.getElementById('passwords').innerHTML = " ** password are incorrect";
+			return false;
+		}
+
+
+
+		if (confirmpass == ""){
+			document.getElementById('confrmpass').innerHTML = " ** please fill the confirm password field";
+			return false;
+		}
+
+
+			
+		
+		if (mobileNumber == ""){
+			document.getElementById('mobileon').innerHTML = " ** please fill the mobile number  field";
+			return false;
+		}
+		if (isNaN(mobileNumber)) {
+			document.getElementById('mobileon').innerHTML = " ** user most write digits only , not characters";
+			return false;
+		}
+		if (mobileNumber.length != 10) {
+			document.getElementById('mobileon').innerHTML = " ** Mobile number must be 10 digits";
+			return false;
+		}
+
+		if (email == ""){
+			document.getElementById('emails').innerHTML = " ** please fill the email id field";
+			return false;
+		}
+		if (email.indexOf('@') <= 0) {
+			document.getElementById('emails').innerHTML = " ** @ INvalid Position";
+			return false;
+		}
+		if((emails.charAt(emails.length-4)!=".") && (emails.charAt(emails.length-3)!=".")){
+			document.getElementById('emails').innerHTML = " ** . Invalid Position";
+			return false;
+		}
+	}	
+
+	</script>
+	
+</body>
+</html
